@@ -3,6 +3,8 @@
 ## V2.0
 This is a rewrite of the original library created by [miwagner](https://github.com/miwagner/ESP32-Arduino-CAN). The old version of this library used registry commands to configure the TWAI[^1] peripheral and has not been updated in years. Newer versions of the Espressif IDF have built in functions to configure the TWAI peripheral that are more reliable. V2.0 of this library incorporates these new IDF functions in the original function calls of the ESP32-Arduino-CAN library.
 
+What changed in this particular fork: I noticed that bus fails when I unplug one of the devices. To mitigate what, I added another entry to an enum, to detect these errors and reinitialize the CAN 
+
 ## Features
 * Easily configure the ESP32 TWAI[^1] peripheral
 * Send and receive CAN Bus messages
