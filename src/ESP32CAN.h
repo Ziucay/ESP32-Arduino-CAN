@@ -20,7 +20,8 @@
 /* typedef ------------------------------------------------------------------- */
 typedef enum {
     ESP32CAN_NOK = 0,  /* not ok, something is wrong */
-    ESP32CAN_OK  = 1   /* ok, all seems well */
+    ESP32CAN_OK  = 1,   /* ok, all seems well */
+    ESP32CAN_ILLEGAL_STATE = 2 /* not ok, need to reinit bus*/
 } ESP32CAN_status_t;
 
 typedef enum {
